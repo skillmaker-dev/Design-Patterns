@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{DA801238-E05F-40DF-B7A3-F6CB868C66D5}</ProjectGuid>
+    <ProjectGuid>{BC6DD128-D617-4DBF-8979-1658BAA622E9}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Composite_Pattern</RootNamespace>
-    <AssemblyName>Composite Pattern</AssemblyName>
+    <RootNamespace>Memento_Pattern</RootNamespace>
+    <AssemblyName>Memento Pattern</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,9 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Composite.cs" />
-    <Compile Include="File.cs" />
-    <Compile Include="Folder.cs" />
+    <Compile Include="Editor.cs" />
+    <Compile Include="EditorState.cs" />
+    <Compile Include="History.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
