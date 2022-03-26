@@ -6,26 +6,26 @@ using System.Threading.Tasks;
 
 namespace Iterator_Pattern
 {
-    public class BrowserHistory
+    public class BrowserHistory<T>
     {
-        public List<string> History { get; private set; } = new List<string>();
+        public List<T> History { get; private set; } = new List<T>();
 
-        public void Push(string url)
+        public void Push(T obj)
         {
-            History.Add(url);
+            History.Add(obj);
         }
 
-        public string Pop()
+        public T Pop()
         {
-            var removedUrl =  History[History.Count - 1];
-            History.Remove(removedUrl);
+            var removedobj =  History[History.Count - 1];
+            History.Remove(removedobj);
 
-            return removedUrl;
+            return removedobj;
         }
 
-        public IIterator CreateListIterator()
+        public IIterator<T> CreateListIterator()
         {
-            return new ListIterator(this);
+            return new ListIterator<T>(this);
         }
 
     }

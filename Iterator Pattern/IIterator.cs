@@ -1,10 +1,10 @@
 ﻿namespace Iterator_Pattern
 {
-    public interface IIterator
+    public interface IIterator<T>
     {
         bool HasNext();
         void Next();
-        string Current();
+        T Current();
 
     }
 }

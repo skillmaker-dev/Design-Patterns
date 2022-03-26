@@ -1,16 +1,16 @@
 ﻿namespace Iterator_Pattern
 {
     
-        public class ListIterator : IIterator
+        public class ListIterator<T> : IIterator<T>
         {
-            private readonly BrowserHistory browserHistory;
+            private readonly BrowserHistory<T> browserHistory;
             private int _index;
 
-            public ListIterator(BrowserHistory browserHistory)
+            public ListIterator(BrowserHistory<T> browserHistory)
             {
                 this.browserHistory = browserHistory;
             }
-            public string Current()
+            public T Current()
             {
                 return browserHistory.History[_index];
             }

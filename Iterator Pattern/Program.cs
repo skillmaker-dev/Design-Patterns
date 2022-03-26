@@ -10,21 +10,46 @@ namespace Iterator_Pattern
     {
         static void Main(string[] args)
         {
-            var history = new BrowserHistory();
 
-            history.Push("Link1");
-            history.Push("Link2");
-            history.Push("Link3");
-            history.Push("Link4");
+            //iterating over a list of strings 
+
+            var stringHistory = new BrowserHistory<string>();
+
+            stringHistory.Push("Link1");
+            stringHistory.Push("Link2");
+            stringHistory.Push("Link3");
+            stringHistory.Push("Link4");
 
 
-            var listIterator = history.CreateListIterator();
+            var stringListIterator = stringHistory.CreateListIterator();
 
 
-            while(listIterator.HasNext())
+            while(stringListIterator.HasNext())
             {
-                Console.WriteLine(listIterator.Current());
-                listIterator.Next();
+                Console.WriteLine(stringListIterator.Current());
+                stringListIterator.Next();
+            }
+
+
+
+
+            //iterating over a list of objects
+
+            var objHistory = new BrowserHistory<object>();
+
+            objHistory.Push(new Object());
+            objHistory.Push(new Object());
+            objHistory.Push(new Object());
+            objHistory.Push(new Object());
+
+
+            var objectListIterator = objHistory.CreateListIterator();
+
+
+            while (objectListIterator.HasNext())
+            {
+                Console.WriteLine(objectListIterator.Current());
+                objectListIterator.Next();
             }
         }
     }
